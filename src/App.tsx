@@ -21,12 +21,12 @@ function App() {
   return (
     <div className=" min-h-screen bg-secondary flex flex-col justify-center ">
       <div className="mx-w-md w-full mx-auto" >
-        <div className="text-xl text-center font-medium"> login</div>
+        <div className="text-xl text-center font-medium"> WELCOME BACK</div>
       </div>
       <div className=" w-1/3 mx-auto mt-4 bg-white p-5 border border-gray-300 rounded ">
         <form action="" className="space-y-6" onSubmit={onSubmit}>
           <div>
-            <label htmlFor="" className="text-sm font-bold text-seconday block"> email</label>
+            <label htmlFor="" className="text-sm font-bold text-secondary block"> email</label>
             <input {...register("email", { required: "email is required" })} type="text" className="w-full p-2 border border-gray-300 rounded mt-1" />
             {errors.email && (
               <p className="text-red-500 text-sm">{errors.email.message}</p>
@@ -47,7 +47,7 @@ function App() {
               <a href="" className="font-medium text-sm text-primary">forgot password?</a>
             </div>
           </div>
-          <button type='submit' className="w-full py-2 px-4 bg-primary hover:bg-hover rounded-md text-white text-sm text-center"> submit</button>
+          <button type='submit' className="w-full py-2 px-4 bg-primary hover:bg-hover rounded-md text-white text-sm text-center"> login</button>
         </form>
 
       </div>
