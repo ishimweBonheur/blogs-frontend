@@ -1,13 +1,18 @@
 import React from 'react';
 import './App.css';
 import './index.css';
-import  Login  from './components/login';  
+import Login from './components/login&signup';  
+import SignupForm from './components/login&signup';
+import AppRoutes from './routes';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() { 
   return (
-    <div className="">
-      <Login />
-    </div>
+    <Router> 
+      <div className="">
+        <AppRoutes />
+      </div>
+    </Router>
   );
 }
 
