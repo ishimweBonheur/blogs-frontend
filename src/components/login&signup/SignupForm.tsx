@@ -58,7 +58,7 @@ function SignupForm() {
               <label htmlFor="" className="text-sm font-bold text-secondary block"> Confirm password</label>
               <input type="password"   {...register("Confirmpassword", {
                 required: "Please confirm your password",
-              })} className="w-full p-2 border border-primary rounded mt-1" />
+              })} className="w-full p-2 border border-primary rounded mt-1 sm:col-span-2" />
               {errors.Confirmpassword&&<p className="text-red-500 text-sm">{errors.Confirmpassword.message}</p>}
             </div>
 
