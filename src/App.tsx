@@ -23,18 +23,18 @@ function App() {
       <div className="mx-w-md w-full mx-auto" >
         <div className="text-xl text-center font-medium"> WELCOME BACK</div>
       </div>
-      <div className=" w-1/3 mx-auto mt-4 bg-white p-5 border border-gray-300 rounded ">
+      <div className=" w-1/3 mx-auto mt-4 bg-white-800 shadow-2xl  p-5  rounded shadow- ">
         <form action="" className="space-y-6" onSubmit={onSubmit}>
           <div>
             <label htmlFor="" className="text-sm font-bold text-secondary block"> email</label>
-            <input {...register("email", { required: "email is required" })} type="text" className="w-full p-2 border border-gray-300 rounded mt-1" />
+            <input {...register("email", { required: "email is required" })} type="text" className="w-full p-2 border border-primary rounded mt-1 " />
             {errors.email && (
               <p className="text-red-500 text-sm">{errors.email.message}</p>
             )}
           </div>
           <div>
             <label htmlFor="" className="text-sm font-bold text-secondary block"> password</label>
-            <input {...register("password", { required: "Password is required", minLength: { value: 8, message: "Password must be at least 8 characters" } })} type="password" className="w-full p-2 border border-gray-300 rounded mt-1" />
+            <input {...register("password", { required: "Password is required", minLength: { value: 8, message: "Password must be at least 8 characters" } })} type="password" className="w-full p-2 border border-primary rounded mt-1" />
             {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
 
           </div>
@@ -47,7 +47,7 @@ function App() {
               <a href="" className="font-medium text-sm text-primary">forgot password?</a>
             </div>
           </div>
-          <button type='submit' className="w-full py-2 px-4 bg-primary hover:bg-hover rounded-md text-white text-sm text-center"> login</button>
+          <button type='submit' className="w-full py-2 px-4 bg-primary shadow-md  hover:bg-hover hover:shadow-lg rounded-md text-white text-sm text-center"> login</button>
         </form>
 
       </div>
