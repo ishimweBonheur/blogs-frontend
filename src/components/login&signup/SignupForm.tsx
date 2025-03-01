@@ -26,28 +26,28 @@ function SignupForm() {
         <div className=" w-1/2 mx-auto mt-4 bg-white shadow-2xl  p-5  rounded ">
           <form action="" name="form" className="grid grid-cols-1 sm:grid-cols-2 gap-4" onSubmit={onSubmit}>
             <div>
-              <label htmlFor="" className="text-sm font-bold text-secondary block mt-1"> Firstname</label>
+              <label htmlFor="" className="text-sm font-bold text-primary block mt-1"> Firstname</label>
               <input type="text" {...register("Firstname", {
                 required: "Firstname is required",
               })} className="w-full p-2 border border-primary rounded mt-1" />
              <p className="text-red-500 text-sm">{errors.Firstname?.message}</p>
             </div>
             <div>
-              <label htmlFor="" className="text-sm font-bold text-secondary block mt-1"> Lastname</label>
+              <label htmlFor="" className="text-sm font-bold text-primary block mt-1"> Lastname</label>
               <input type="text" {...register("Lastname", {
                 required: "Lastname is required"
               })} className="w-full p-2 border border-primary rounded mt-1" />
               <p className="text-red-500 text-sm">{errors.Lastname?.message}</p>
             </div>
             <div>
-              <label htmlFor="" className="text-sm font-bold text-secondary block"> Email Address</label>
+              <label htmlFor="" className="text-sm font-bold text-primary block"> Email Address</label>
               <input type="text" {...register("Email", {
                 required: "email is required"
               })} className="w-full p-2 border border-primary rounded mt-1" />
               <p className="text-red-500 text-sm">{errors.Email?.message}</p>
             </div>
             <div>
-              <label htmlFor="" className="text-sm font-bold text-secondary block"> Create Password</label>
+              <label htmlFor="" className="text-sm font-bold text-primary block"> Create Password</label>
               <input type="password"  {...register("Password", {
                 required: "Password is required",
                 minLength: { value: 8, message: "Password must be at least 8 characters" },
@@ -55,7 +55,7 @@ function SignupForm() {
               <p className="text-red-500 text-sm">{errors.Password?.message}</p>
             </div>
             <div className="sm:col-span-2">
-              <label htmlFor="" className="text-sm font-bold text-secondary block"> Confirm password</label>
+              <label htmlFor="" className="text-sm font-bold text-primary block"> Confirm password</label>
               <input type="password"   {...register("Confirmpassword", {
                 required: "Please confirm your password",
               })} className="w-full p-2 border border-primary rounded mt-1 sm:col-span-2" />

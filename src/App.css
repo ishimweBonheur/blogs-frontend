@@ -1,8 +1,4 @@
-:root {
-  --primary-color: #003c71;
-  --secondary-color: #c9cccd;
-  --hover-color: #002a52;
-}
+
 
 button {
   background: var(--primary-color);

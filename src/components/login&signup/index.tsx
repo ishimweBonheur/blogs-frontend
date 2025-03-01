@@ -25,14 +25,14 @@ const Login = () => {
       <div className=" w-1/3 mx-auto mt-4 bg-white shadow-2xl  p-5  rounded shadow- ">
         <form action="" className="space-y-6" onSubmit={onSubmit}>
           <div>
-            <label htmlFor="" className="text-sm font-bold text-secondary block"> Email</label>
+            <label htmlFor="" className="text-sm font-bold text-primary block"> Email</label>
             <input {...register("email", { required: "email is required" })} type="text" className="w-full p-2 border border-primary rounded mt-1 " />
             {errors.email && (
               <p className="text-red-500 text-sm">{errors.email.message}</p>
             )}
           </div>
           <div>
-            <label htmlFor="" className="text-sm font-bold text-secondary block"> Password</label>
+            <label htmlFor="" className="text-sm font-bold text-primary block"> Password</label>
             <input {...register("password", { required: "Password is required", minLength: { value: 8, message: "Password must be at least 8 characters" } })} type="password" className="w-full p-2 border border-primary rounded mt-1" />
             {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
 
