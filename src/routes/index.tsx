@@ -16,7 +16,6 @@ function AppRoutes() {
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
-    console.log("Sidebar open:", !isSidebarOpen);
   };
   const hideHeaderAndSidebar=location.pathname==="/login"|| location.pathname==="/register";
 
