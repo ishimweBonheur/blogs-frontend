@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import { Navigate, Route, Router, Routes, useLocation } from 'react-router-dom';
 import Login from '../components/login&signup';
 import SignupForm from '../components/login&signup/SignupForm';
 import Header from '../components/Header/Header';
 import Sidebar from '../components/Header/Sidebar';
-import Layout from '../components/Ui/Layout';
-import Content from '../components/Ui/Content';
 
 function AppRoutes() {
   const [darkMode, setDarkMode] = useState(false);
@@ -26,8 +24,7 @@ function AppRoutes() {
 
       {!hideHeaderAndSidebar && <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} toggleSidebar={toggleSidebar} sidebarOpen={isSidebarOpen} />}
       {!hideHeaderAndSidebar && <Sidebar isSidebarOpen={isSidebarOpen} />}
-      <div className={`transition-all duration-300 w-full ${isSidebarOpen ? "w-64 " : "ml-0"}`}>
-   
+      <div className={`transition-all duration-300 flex-1  ${isSidebarOpen ? "w-64 " : "ml-0"}`}>
 
         <Routes>
           <Route path="/" element={<Navigate to="/login" />} />
