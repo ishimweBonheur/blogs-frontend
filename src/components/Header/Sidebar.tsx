@@ -1,5 +1,11 @@
 import React from 'react';
-import { FaHome, FaUsers, FaChalkboardTeacher, FaWallet, FaBell, FaCog, FaSignOutAlt } from 'react-icons/fa';
+import { CiSettings } from "react-icons/ci";
+import { IoHomeOutline } from "react-icons/io5";
+import { HiOutlineUsers } from "react-icons/hi";
+import { LiaChalkboardTeacherSolid } from "react-icons/lia";
+import { TbMoneybag } from "react-icons/tb";
+import { GoBell } from "react-icons/go";
+import { GoSignOut } from "react-icons/go";
 
 interface SideProps {
   isSidebarOpen: boolean;
@@ -8,37 +14,37 @@ const navigationLinks = [
   {
     name: 'Home',
     path: '/',
-    icon: <FaHome />,
+    icon: <IoHomeOutline />,
   },
   {
     name: 'Students',
     path: '/students',
-    icon: <FaUsers />,
+    icon: <HiOutlineUsers />,
   },
   {
     name: 'Teachers & Staff',
     path: '/teachers-staff',
-    icon: <FaChalkboardTeacher />,
+    icon: <LiaChalkboardTeacherSolid />,
   },
   {
-    name: 'Financial & Resource Management',
+    name: 'Finance',
     path: '/financial-resources',
-    icon: <FaWallet />,
+    icon: <TbMoneybag />,
   },
   {
     name: 'Notifications',
     path: '/notifications',
-    icon: <FaBell />,
+    icon: <GoBell />,
   },
   {
     name: 'Settings',
     path: '/settings',
-    icon: <FaCog />,
+    icon: <CiSettings />,
   },
   {
     name: 'Logout',
     path: '/logout',
-    icon: <FaSignOutAlt />,
+    icon: <GoSignOut />,
   },
 ];
 
@@ -46,18 +52,18 @@ const navigationLinks = [
 function Sidebar({ isSidebarOpen }: SideProps) {
   return (
     <aside
-      className={`fixed top-0 left-0 z-40 w-64 h-screen pt-20 bg-primary border-r shadow border-r shadow-sm dark:bg-primary dark:border-hover transition-transform duration-300 ease-in-out transform ${!isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}
+      className={`fixed top-0 left-0 z-40 w-64 h-screen pt-20 bg-white border-r shadow border-r shadow-sm dark:bg-hover dark:border-hover transition-transform duration-300 ease-in-out transform ${!isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}
     >
       <div className="h-full px-3 overflow-y-auto ">
         <ul className="space-y-3 ">
           {navigationLinks.map((link) => (
-            <li key={link.name}>
+            <li key={link.name} >
               <a
                 href={link.path}
-                className="flex items-center space-x-2 text-secondary hover:bg-hover px-3 py-2 rounded-md"
+                className="flex  items-center space-x-2 text-hover hover:text-primary dark:text-gray-300 dark:hover:text-white hover:bg-secondary px-3 py-2 rounded-lg"
               >
-                {link.icon}
-                <span>{link.name}</span>
+                <span className=" flex mr-3">{link.icon}</span>
+                <span className="">{link.name}</span>
               </a>
             </li>
           ))}
