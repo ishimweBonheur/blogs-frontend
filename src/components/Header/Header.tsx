@@ -15,7 +15,7 @@ function Header({darkMode ,toggleDarkMode,toggleSidebar}:HeaderProps) {
       <div className="px-3 py-3 lg:px-5 lg:pl-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center justify-start rtl:justify-end ">
-            <button onClick={toggleSidebar} className=" inline-flex items-center p-2 text-sm text-gray-500 rounded-lg  hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary  dark:text-secondary dark:hover:bg-hover dark:focus:ring-secondary">
+            <button onClick={toggleSidebar} className=" inline-flex p-2 text-sm text-gray-500 rounded-lg  hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary  dark:text-secondary dark:hover:bg-hover dark:focus:ring-secondary">
               <HiOutlineMenuAlt2 className="text-2xl"/>
             </button>
           </div>

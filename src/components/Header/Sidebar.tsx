@@ -51,17 +51,17 @@ const navigationLinks = [
 
 function Sidebar({ isSidebarOpen }: SideProps) {
   return (
+      
     <aside
-      className={`fixed top-0 left-0 z-40 w-64 h-screen pt-20 bg-white border-r shadow border-r shadow-sm dark:bg-hover dark:border-hover transition-transform duration-300 ease-in-out transform ${!isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}
+      className={`fixed top-0 left-0 z-40 w-64 h-full pt-20 bg-white border-r shadow border-r shadow-sm dark:bg-hover dark:border-hover transition-transform duration-300 ease-in-out transform ${!isSidebarOpen ? 'translate-x-0 ' : '-translate-x-full'}`}
     >
-      <div className="h-full px-3 overflow-y-auto ">
-        <ul className="space-y-3 ">
+      <div className="h-full px-3 overflow-y-auto pb-4">
+        <ul className="space-y-3  font-medium">
           {navigationLinks.map((link) => (
             <li key={link.name} >
               <a
                 href={link.path}
-                className="flex  items-center space-x-2 text-hover hover:text-primary dark:text-gray-300 dark:hover:text-white hover:bg-secondary px-3 py-2 rounded-lg"
-              >
+                className="flex  items-center space-x-2 text-hover hover:text-primary dark:text-gray-300 dark:hover:text-white hover:bg-secondary dark:hover:bg-primary px-3 py-2 rounded-lg" >
                 <span className=" flex mr-3">{link.icon}</span>
                 <span className="">{link.name}</span>
               </a>
