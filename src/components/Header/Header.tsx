@@ -11,15 +11,15 @@ interface HeaderProps {
 function Header({darkMode ,toggleDarkMode,toggleSidebar,sidebarOpen}:HeaderProps) {
   
   return (
-    <nav className={`fixed top-0 z-50 w-full bg-background dark:bg-mini dark:shadow-2xl border-secondary dark:border-gray-700 shadow-lg  ${sidebarOpen ? ' ' : '  ml-64'}  `}>
-      <div className="px-3 py-3 lg:px-5 lg:pl-3">
+    <nav className={` top-0 z-50 w-full bg-background dark:bg-mini dark:shadow-2xl border-secondary dark:border-gray-700 shadow-lg    `}>
+      <div className=" py-3 lg:px-5 lg:pl-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center justify-start rtl:justify-end ">
             <button onClick={toggleSidebar} className={`inline-flex p-2 text-sm text-gray-500 rounded-lg  hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-secondary  dark:text-secondary dark:hover:bg-hover dark:focus:ring-secondary  `}>
               <HiOutlineMenuAlt2 className="text-2xl"/>
             </button>
           </div>  
-          <button className={`  text-primary hover:text-hover dark:text-secondary rounded full sm:text-base md:text-lg lg:text-xl xl:text-2xl  ${!sidebarOpen ? 'mr-64 sm:mr-64 lg:mr-64 md:mr-64 ' : ''}`} onClick={toggleDarkMode}>{darkMode?<FaSun/>:<FaMoon/>}</button>
+          <button className={`  text-primary hover:text-hover dark:text-secondary rounded full sm:text-base md:text-lg lg:text-xl xl:text-2xl  `} onClick={toggleDarkMode}>{darkMode?<FaSun/>:<FaMoon/>}</button>
         </div>
       </div>
     </nav>

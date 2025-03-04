@@ -7,7 +7,7 @@ interface DashboardLayoutProps {
   children: ReactNode;
 }
 
-const DashboardLayout = ({ children }:DashboardLayoutProps) => {
+const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   const [darkMode, setDarkMode] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -28,13 +28,16 @@ const DashboardLayout = ({ children }:DashboardLayoutProps) => {
   };
 
   return (
-    <div className="h-screen flex">
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} toggleSidebar={toggleSidebar} sidebarOpen={isSidebarOpen} />
+    <div className="h-screen w-full flex">
       <Sidebar isSidebarOpen={isSidebarOpen} />
-      <div className={`flex-1 transition-all duration-300 dark:bg-hover bg-secondary`}>
-        <div className={`transition-all duration-300 p-4 mt-14 flex`}>
-          {children}
-        </div>
+      <div className=" flex w-full flex-col dark:bg-hover">
+        <Header
+          darkMode={darkMode}
+          toggleDarkMode={toggleDarkMode}
+          toggleSidebar={toggleSidebar}
+          sidebarOpen={isSidebarOpen}
+        />
+        {children}
       </div>
     </div>
   );
