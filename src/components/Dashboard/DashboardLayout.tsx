@@ -31,8 +31,8 @@ const DashboardLayout = ({ children }:DashboardLayoutProps) => {
     <div className="h-screen flex">
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} toggleSidebar={toggleSidebar} sidebarOpen={isSidebarOpen} />
       <Sidebar isSidebarOpen={isSidebarOpen} />
-      <div className={`flex-1 transition-all duration-300 dark:bg-hover bg-secondary ${isSidebarOpen ? "" : "pl-64"}`}>
-        <div className="transition-all duration-300 p-4 mt-14 flex">
+      <div className={`flex-1 transition-all duration-300 dark:bg-hover bg-secondary`}>
+        <div className={`transition-all duration-300 p-4 mt-14 flex`}>
           {children}
         </div>
       </div>
