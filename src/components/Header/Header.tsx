@@ -19,7 +19,7 @@ function Header({darkMode ,toggleDarkMode,toggleSidebar,sidebarOpen}:HeaderProps
               <HiOutlineMenuAlt2 className="text-2xl"/>
             </button>
           </div>  
-          <button className={`dark:bg-secondary bg-primary text-secondary hover:bg-hover dark:text-primary rounded full ${!sidebarOpen ? 'mr-64' : ''}`} onClick={toggleDarkMode}>{darkMode?<FaSun/>:<FaMoon/>}</button>
+          <button className={`  text-primary hover:text-hover dark:text-secondary rounded full ${!sidebarOpen ? 'mr-64' : ''}`} onClick={toggleDarkMode}>{darkMode?<FaSun/>:<FaMoon/>}</button>
         </div>
       </div>
     </nav>

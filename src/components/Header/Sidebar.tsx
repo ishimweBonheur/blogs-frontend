@@ -14,12 +14,12 @@ interface SideProps {
 const navigationLinks = [
   {
     name: 'Home',
-    path: '/',
+    path: '/home',
     icon: <IoHomeOutline />,
   },
   {
     name: 'Students',
-    path: '/dashboard',
+    path: '/students',
     icon: <HiOutlineUsers />,
   },
   {
