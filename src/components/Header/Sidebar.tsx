@@ -54,7 +54,7 @@ function Sidebar({ isSidebarOpen }: SideProps) {
   return (
 
     <aside
-      className={`fixed top-0 left-0 z-40 w-64 h-full pt-20 bg-white border-r shadow border-r shadow-sm dark:bg-hover dark:border-hover transition-transform duration-300 ease-in-out transform ${!isSidebarOpen ? 'translate-x-0 ' : '-translate-x-full'}`}
+      className={`fixed top-0 left-0 z-40 w-64 h-full pt-20 bg-white border-r shadow border-r shadow-sm dark:bg-hover dark:border-hover dark:shadow-2xl transition-transform duration-300 ease-in-out transform ${!isSidebarOpen ? 'translate-x-0 ' : '-translate-x-full'}`}
     >
       <div className="h-full px-3 overflow-y-auto pb-4">
         <ul className="space-y-3  font-medium">

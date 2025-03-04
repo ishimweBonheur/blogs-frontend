@@ -11,7 +11,7 @@ interface HeaderProps {
 function Header({darkMode ,toggleDarkMode,toggleSidebar,sidebarOpen}:HeaderProps) {
   
   return (
-    <nav className={`fixed top-0 z-50 w-full bg-white dark:bg-hover border-secondary dark:border-gray-700 shadow-lg  ${sidebarOpen ? ' ' : '  ml-64'}  `}>
+    <nav className={`fixed top-0 z-50 w-full bg-white dark:bg-hover dark:shadow-2xl border-secondary dark:border-gray-700 shadow-lg  ${sidebarOpen ? ' ' : '  ml-64'}  `}>
       <div className="px-3 py-3 lg:px-5 lg:pl-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center justify-start rtl:justify-end ">

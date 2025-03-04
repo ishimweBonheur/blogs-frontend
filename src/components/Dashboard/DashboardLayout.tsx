@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ReactNode } from "react";
 import Header from "../Header/Header";
 import Sidebar from "../Header/Sidebar";
@@ -7,9 +7,17 @@ interface DashboardLayoutProps {
   children: ReactNode;
 }
 
-const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
+const DashboardLayout = ({ children }:DashboardLayoutProps) => {
   const [darkMode, setDarkMode] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -20,11 +28,13 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
   };
 
   return (
-    <div className={darkMode ? "dark flex h-screen" : "flex h-screen"}>
+    <div className="h-screen flex">
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} toggleSidebar={toggleSidebar} sidebarOpen={isSidebarOpen} />
       <Sidebar isSidebarOpen={isSidebarOpen} />
-      <div className={`flex-1 transition-all duration-300 ${isSidebarOpen ? "" : "pl-64"}`}>
-        <div className="transition-all duration-300 p-2 mt-16">{children}</div>
+      <div className={`flex-1 transition-all duration-300 dark:bg-hover bg-secondary ${isSidebarOpen ? "" : "pl-64"}`}>
+        <div className="transition-all duration-300 p-4 mt-14 dark:bg-primary bg-secondary flex">
+          {children}
+        </div>
       </div>
     </div>
   );
