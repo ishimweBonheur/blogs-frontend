@@ -32,7 +32,7 @@ const DashboardLayout = ({ children }:DashboardLayoutProps) => {
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} toggleSidebar={toggleSidebar} sidebarOpen={isSidebarOpen} />
       <Sidebar isSidebarOpen={isSidebarOpen} />
       <div className={`flex-1 transition-all duration-300 dark:bg-hover bg-secondary ${isSidebarOpen ? "" : "pl-64"}`}>
-        <div className="transition-all duration-300 p-4 mt-14 dark:bg-primary bg-secondary flex">
+        <div className="transition-all duration-300 p-4 mt-14 flex">
           {children}
         </div>
       </div>
