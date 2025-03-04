@@ -6,6 +6,7 @@ import { LiaChalkboardTeacherSolid } from "react-icons/lia";
 import { TbMoneybag } from "react-icons/tb";
 import { GoBell } from "react-icons/go";
 import { GoSignOut } from "react-icons/go";
+import { Link } from "react-router-dom";
 
 interface SideProps {
   isSidebarOpen: boolean;
@@ -18,17 +19,17 @@ const navigationLinks = [
   },
   {
     name: 'Students',
-    path: '/students',
+    path: '/dashboard',
     icon: <HiOutlineUsers />,
   },
   {
     name: 'Teachers & Staff',
-    path: '/teachers-staff',
+    path: '/teacher_staff',
     icon: <LiaChalkboardTeacherSolid />,
   },
   {
     name: 'Finance',
-    path: '/financial-resources',
+    path: '/finance',
     icon: <TbMoneybag />,
   },
   {
@@ -51,7 +52,7 @@ const navigationLinks = [
 
 function Sidebar({ isSidebarOpen }: SideProps) {
   return (
-      
+
     <aside
       className={`fixed top-0 left-0 z-40 w-64 h-full pt-20 bg-white border-r shadow border-r shadow-sm dark:bg-hover dark:border-hover transition-transform duration-300 ease-in-out transform ${!isSidebarOpen ? 'translate-x-0 ' : '-translate-x-full'}`}
     >
@@ -59,13 +60,12 @@ function Sidebar({ isSidebarOpen }: SideProps) {
         <ul className="space-y-3  font-medium">
           {navigationLinks.map((link) => (
             <li key={link.name} >
-              <a
-                href={link.path}
-                className="flex  items-center space-x-2 text-hover hover:text-primary dark:text-gray-300 dark:hover:text-white hover:bg-secondary dark:hover:bg-primary px-3 py-2 rounded-lg" >
+              <Link to={link.path}  className="flex  items-center space-x-2 text-hover hover:text-primary dark:text-gray-300 dark:hover:text-white hover:bg-secondary dark:hover:bg-primary px-3 py-2 rounded-lg">
                 <span className=" flex mr-3">{link.icon}</span>
                 <span className="">{link.name}</span>
-              </a>
+              </Link>  
             </li>
+            
           ))}
         </ul>
       </div>
