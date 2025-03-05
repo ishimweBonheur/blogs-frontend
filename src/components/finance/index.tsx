@@ -3,7 +3,7 @@ import React from 'react';
 function Finance() { 
   return (
     <>
-    <div className='w-full text-center text-white'>Finance</div>
+    <div className='w-full text-start text-black'>Finance</div>
     </>
   );
 }

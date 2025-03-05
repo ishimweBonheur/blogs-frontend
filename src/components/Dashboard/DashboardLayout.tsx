@@ -35,8 +35,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
           darkMode={darkMode}
           toggleDarkMode={toggleDarkMode}
           toggleSidebar={toggleSidebar}
-          sidebarOpen={isSidebarOpen}
-        />
+          sidebarOpen={isSidebarOpen}  />
         {children}
       </div>
     </div>
